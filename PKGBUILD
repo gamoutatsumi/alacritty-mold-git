@@ -1,4 +1,4 @@
-pkgname='alacritty-git'
+pkgname='alacritty-mold-git'
 _pkgname="alacritty"
 pkgver=0.10.0.1880.gc96047dc
 pkgrel=1
@@ -30,7 +30,7 @@ check(){
   env CARGO_INCREMENTAL=0 cargo test --release
 }
 
-package_alacritty-git() {
+package_alacritty-mold-git() {
 	cd $_pkgname
 
 	desktop-file-install -m 644 --dir "$pkgdir/usr/share/applications/" "$srcdir/$_pkgname/extra/linux/Alacritty.desktop"
